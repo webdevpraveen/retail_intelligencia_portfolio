@@ -1,0 +1,103 @@
+.feature-showcase {
+  background-color: var(--color-bg-primary);
+  padding-block: var(--space-24);
+}
+
+.feature-showcase__grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.feature-row--reversed .feature-row__content {
+  order: 2;
+}
+
+.feature-row--reversed .feature-row__visual {
+  order: 1;
+}
+
+.feature-row__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-row__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.feature-row__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.feature-row__title {
+  font-family: var(--font-display);
+  font-size: var(--text-heading);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-4);
+  letter-spacing: var(--tracking-tight);
+}
+
+.feature-row__description {
+  font-size: var(--text-body);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-8);
+}
+
+.feature-row__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.feature-row__list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--text-body-sm);
+  color: var(--color-text-primary);
+}
+
+.feature-row__list-icon {
+  color: var(--color-status-live);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .feature-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  .feature-row--reversed .feature-row__content {
+    order: unset;
+  }
+  
+  .feature-row--reversed .feature-row__visual {
+    order: unset;
+  }
+}

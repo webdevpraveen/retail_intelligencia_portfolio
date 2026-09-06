@@ -1,0 +1,148 @@
+.customer-journey {
+  background-color: var(--color-bg-secondary);
+}
+
+.journey-comparison {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--space-8);
+  max-width: 900px;
+  margin-inline: auto;
+  align-items: center;
+}
+
+.journey-path {
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+}
+
+.journey-path--ai {
+  border-color: var(--color-accent-border);
+  box-shadow: 0 0 20px hsla(200, 80%, 55%, 0.05);
+}
+
+.journey-path__title {
+  font-family: var(--font-mono);
+  font-size: var(--text-technical);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.journey-path--ai .journey-path__title {
+  color: var(--color-accent);
+}
+
+.journey-steps {
+  display: flex;
+  flex-direction: column;
+}
+
+.journey-step-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.journey-step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) 0;
+}
+
+.journey-step__dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-bg-secondary);
+  border: 2px solid var(--color-border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.journey-step--active .journey-step__dot {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg-primary);
+  box-shadow: 0 0 10px var(--color-accent-glow);
+}
+
+.journey-step__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+}
+
+.journey-step__label {
+  font-family: var(--font-display);
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.journey-step--active .journey-step__label {
+  color: var(--color-text-primary);
+  font-weight: var(--weight-semibold);
+}
+
+.journey-connector {
+  width: 2px;
+  height: 24px;
+  background: var(--color-border-strong);
+  margin-left: 11px; /* Align with center of 24px dot */
+  margin-block: var(--space-2);
+}
+
+.journey-connector--active {
+  background: linear-gradient(to bottom, var(--color-accent), hsla(200, 80%, 55%, 0.2));
+}
+
+/* ── VS Divider ── */
+.journey-vs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.journey-vs__line {
+  width: 1px;
+  height: 100px;
+  background: var(--color-border);
+}
+
+.journey-vs__badge {
+  font-family: var(--font-mono);
+  font-size: var(--text-small);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-tertiary);
+  background: var(--color-bg-tertiary);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+}
+
+@media (max-width: 768px) {
+  .journey-comparison {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .journey-vs {
+    flex-direction: row;
+  }
+
+  .journey-vs__line {
+    height: 1px;
+    width: 100px;
+  }
+}

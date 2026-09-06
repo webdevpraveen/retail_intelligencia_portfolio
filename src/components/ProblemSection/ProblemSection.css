@@ -1,0 +1,164 @@
+.problem-section {
+  background-color: var(--color-bg-primary);
+}
+
+.problem-section__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+/* ── Friction Diagram (Decorative/Technical) ── */
+.problem-section__visual {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8);
+}
+
+.friction-diagram {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.friction-diagram__track {
+  display: flex;
+  gap: var(--space-4);
+  width: 70%;
+  padding-right: var(--space-8);
+}
+
+.friction-diagram__item {
+  width: 40px;
+  height: 40px;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  animation: slide-right 4s linear infinite;
+  opacity: 0.5;
+}
+
+.friction-diagram__item--delayed {
+  animation-duration: 6s;
+  background: var(--color-bg-tertiary);
+}
+
+.friction-diagram__bottleneck {
+  position: absolute;
+  right: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-status-prototype); /* amber */
+}
+
+.friction-diagram__bottleneck-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: hsla(42, 70%, 52%, 0.1);
+  border: 1px dashed var(--color-status-prototype);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse-border 2s infinite;
+}
+
+.friction-diagram__bottleneck span {
+  font-family: var(--font-mono);
+  font-size: var(--text-technical);
+  letter-spacing: var(--tracking-widest);
+}
+
+@keyframes slide-right {
+  0% { transform: translateX(-50px); opacity: 0; }
+  20% { opacity: 0.5; }
+  80% { opacity: 0.5; transform: translateX(100px); }
+  100% { transform: translateX(120px); opacity: 0; }
+}
+
+@keyframes pulse-border {
+  0%, 100% { border-color: hsla(42, 70%, 52%, 0.3); }
+  50% { border-color: hsla(42, 70%, 52%, 1); }
+}
+
+/* ── Pillars ── */
+.problem-section__pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+}
+
+.problem-pillar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.problem-pillar__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.problem-pillar__title {
+  font-family: var(--font-display);
+  font-size: var(--text-subsection);
+  font-weight: var(--weight-semibold);
+}
+
+.problem-pillar__description {
+  font-size: var(--text-body-sm);
+  color: var(--color-text-secondary);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .problem-section__content {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  .problem-section__visual {
+    aspect-ratio: 21 / 9;
+  }
+}
+
+@media (max-width: 640px) {
+  .problem-section__pillars {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  
+  .problem-section__visual {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .friction-diagram__item {
+    animation: none;
+    transform: translateX(0);
+    opacity: 0.5;
+  }
+  .friction-diagram__bottleneck-icon {
+    animation: none;
+  }
+}
