@@ -22,9 +22,6 @@ export function MediaFrame({ mediaKey, className = '' }: MediaFrameProps) {
           <div className="media-frame__fallback-icon">
             <ImageIcon size={48} strokeWidth={1} />
           </div>
-          <p className="media-frame__fallback-label">
-            {asset ? asset.fallbackLabel : 'Media unavailable'}
-          </p>
         </div>
       </div>
     );
