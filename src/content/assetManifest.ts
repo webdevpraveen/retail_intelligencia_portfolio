@@ -20,7 +20,7 @@ export const assetManifest: Record<string, AssetEntry> = {
   /* ── Conceptual / Cinematic (Category A) ── */
   'hero-cinematic': {
     category: 'conceptual',
-    video: null,
+    video: '/assets/cinematic/hero-video.mp4',
     poster: '/assets/cinematic/hero-poster.jpg',
     fallbackLabel: 'Edge AI × Smart Retail',
     status: 'available',
@@ -41,6 +41,13 @@ export const assetManifest: Record<string, AssetEntry> = {
   },
 
   /* ── Product Evidence (Category B) — NEVER use AI-generated ── */
+  'demo-hardware-flow': {
+    category: 'evidence',
+    video: '/assets/cinematic/hardware-flow.mp4',
+    poster: null,
+    fallbackLabel: 'Hardware Architecture Flow',
+    status: 'available',
+  },
   'demo-object-detection': {
     category: 'evidence',
     video: null,

@@ -263,6 +263,7 @@ export const siteContent: SiteContent = {
     description: 'Explore the system\'s detection capabilities across different retail scenarios.',
     disclaimer: 'This is a demonstration visualization. Detection overlays shown are simulated examples. Actual detection results may vary based on model configuration and environment.',
     tabs: [
+      { id: 'hardware', label: 'Hardware Architecture', description: 'Overview of the edge AI hardware processing flow and system architecture.', mediaKey: 'demo-hardware-flow' },
       { id: 'object', label: 'Object Detection', description: 'AI identifies configured product classes and objects in the visual input.', mediaKey: 'demo-object-detection' },
       { id: 'aisle', label: 'Aisle Monitoring', description: 'Continuous monitoring of aisle activity, shelf states, and product availability.', mediaKey: 'demo-aisle-detection' },
       { id: 'checkout', label: 'Checkout Detection', description: 'Detection of checkout-related events, transaction states, and queue activity.', mediaKey: 'demo-checkout-detection' },
