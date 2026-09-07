@@ -41,6 +41,7 @@ export function MediaFrame({ mediaKey, className = '' }: MediaFrameProps) {
           muted
           loop
           playsInline
+          preload="auto"
           className="media-frame__media"
           onError={() => setHasError(true)}
         />
