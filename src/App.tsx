@@ -3,7 +3,6 @@ import { Hero } from './components/Hero/Hero';
 import { TrustStrip } from './components/TrustStrip/TrustStrip';
 import { ProblemSection } from './components/ProblemSection/ProblemSection';
 import { SolutionSection } from './components/SolutionSection/SolutionSection';
-import { ProofOfWork } from './components/ProofOfWork/ProofOfWork';
 import { FeatureShowcase } from './components/FeatureShowcase/FeatureShowcase';
 import { DemoMode } from './components/DemoMode/DemoMode';
 import { CustomerJourney } from './components/CustomerJourney/CustomerJourney';
@@ -28,7 +27,6 @@ export default function App() {
         
         {/* Chapter 02: The Intelligence */}
         <SolutionSection />
-        <ProofOfWork />
         <FeatureShowcase />
         <DemoMode />
         <CustomerJourney />

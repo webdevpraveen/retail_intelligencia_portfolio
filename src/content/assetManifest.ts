@@ -86,9 +86,9 @@ export const assetManifest: Record<string, AssetEntry> = {
   'demo-intelligence': {
     category: 'evidence',
     video: null,
-    poster: null,
+    poster: '/assets/retail-intelligence.png',
     fallbackLabel: 'Retail intelligence — planned feature',
-    status: 'missing',
+    status: 'available',
   },
   'demo-optimization': {
     category: 'evidence',
@@ -100,9 +100,9 @@ export const assetManifest: Record<string, AssetEntry> = {
   'demo-edge': {
     category: 'evidence',
     video: null,
-    poster: null,
+    poster: '/assets/scalable-edge-architecture.png',
     fallbackLabel: 'Edge architecture — long-term roadmap',
-    status: 'missing',
+    status: 'available',
   },
 
   /* ── Decorative / Technical (Category C) ── */
